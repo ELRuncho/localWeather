@@ -1,27 +1,20 @@
-var x = document.getElementById("demo");
-
-	function getLocation() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(showPosition);
-			navigator.geolocation.getCurrentPosition(putCoords);
-		} else {
-			x.innerHTML = "Geolocation not supported";
-		}
-	}
-
-	function showPosition(position) {
-		x.innerHTML = "Latitude: " + position.coords.latitude + 
-    	"<br>Longitude: " + position.coords.longitude;
-	}
-var url = ""
-	function putCoords(position){
-		url="https://fcc-weather-api.glitch.me/api/current?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude ;
-	}
 var iconurl="";
 $(document).ready(function(){
-	$("#getData").on("click", function(){
+	var x = document.getElementById("data");
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(putCoords);
+	} else {
+		x.innerHTML = "Geolocation not supported";
+	}
+	
+	var url = ""
+	function putCoords(position){
+		url="https://fcc-weather-api.glitch.me/api/current?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude ;
 		$.getJSON(url,function(json) {
+			document.getElementById("ubicacion").innerHTML = json.name;
+			document.getElementById("temp").innerHTML = json.main.temp;
+			document.getElementById("name").innerHTML = json.weather[0].description;
 			document.getElementById("ican").src = json.weather[0].icon;
 		});
-	});
+	}
 });	
