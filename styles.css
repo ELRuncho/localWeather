@@ -1,0 +1,44 @@
+.bod{
+	background-color: black;
+}
+@keyframes tide{
+	from{
+		margin-left: 100%;
+		width: 4%;
+	}
+	to {
+		margin-left: 0%;
+		width: 4%;
+	}
+}
+#titu{
+	font-family: "Helvetica";
+	color: white;
+}
+
+#ubicacion{
+	font-family: "Helvetica";
+	color: white;
+}
+
+#temp{
+	font-family: "Helvetica";
+	color: white;
+}
+
+#name{
+	font-family: "Helvetica";
+	color: white;
+}
+
+#ican{
+	width: 4%;
+	filter: invert(75%);
+	animation-name: tide;
+	animation-duration: 5s;
+}
+
+#footer{
+	font-family: "Helvetica";
+	color: white;
+}
