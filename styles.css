@@ -1,34 +1,50 @@
 .bod{
-	background-color: black;
+	background-color: #1a1a1a;
 }
 @keyframes tide{
 	from{
-		margin-left: 100%;
+		margin-left: 60%;
 		width: 4%;
 	}
 	to {
-		margin-left: 0%;
+		margin-left: 48%;
 		width: 4%;
 	}
 }
+#textos{
+	margin-top: 8%;
+	margin-bottom: 8%;
+}
 #titu{
-	font-family: "Helvetica";
+	font-family: "Lato", sans-serif;
 	color: white;
+	text-align: center;
+	font-weight: 400;
+	font-size: 350%;
 }
 
 #ubicacion{
-	font-family: "Helvetica";
+	font-family: "Lato", sans-serif;
 	color: white;
+	text-align: center;
+	font-weight: 300;
+	font-size: 180%;
 }
 
 #temp{
-	font-family: "Helvetica";
+	font-family: "Lato";
 	color: white;
+	text-align: center;
+	font-weight: 400;
+	font-size: 200%;
 }
 
 #name{
-	font-family: "Helvetica";
+	font-family: "Lato";
 	color: white;
+	text-align: center;
+	font-weight: 200;
+	font-size: 150%;
 }
 
 #ican{
@@ -36,9 +52,34 @@
 	filter: invert(75%);
 	animation-name: tide;
 	animation-duration: 5s;
+	text-align: center;
+	margin-left: 48%;
+}
+img{
+	width: 100%;
 }
 
 #footer{
 	font-family: "Helvetica";
 	color: white;
+	text-align: center;
+}
+.transform {
+  -webkit-transition: all 2s ease;  
+  -moz-transition: all 2s ease;  
+  -o-transition: all 2s ease;  
+  -ms-transition: all 2s ease;  
+  transition: all 2s ease;
+}
+.transform-cold {
+  background-color: #218D9B;
+}
+.transform-warm {
+  background-color: #008000;
+}
+.transform-hot {
+	background-color: #e6b800;
+}
+.transform-veryhot {
+	background-color: #e60000;
 }
